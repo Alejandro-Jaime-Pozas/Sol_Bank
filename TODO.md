@@ -1,0 +1,8 @@
+- Create main docker compose file with backend, frontend, db services
+- Create django python project
+  - Create python venv
+  - Create requirements.txt include drf
+  - Create all data models mentioned in README file
+  - Create Dockerfile
+  - Integrate hunter.io API from docs here to extract company info from user email domain: https://hunter.io/api-documentation/v2#domain-search 
+- Create base react frontend (next.js w typescript via cursor agent)
