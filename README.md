@@ -11,7 +11,7 @@ The initial products offered are:
 - business loan account
 - savings account
 
-Start with business account.
+Start ONLY with business account.
 
 ## Scope
 
