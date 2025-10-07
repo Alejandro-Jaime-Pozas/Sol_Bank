@@ -47,6 +47,7 @@ The objects required to build out this initial phase of the app include:
   - company name
     - extract via email domain, possibly integrate hunter.io to extract
   - password
+- Company
 - Bank Account
 - Debit Card
   - first name
