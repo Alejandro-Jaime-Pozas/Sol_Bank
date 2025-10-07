@@ -47,32 +47,85 @@ The objects required to build out this initial phase of the app include:
   - last name
   - company_id
     - extract via email domain, possibly integrate hunter.io to extract
-  - password
+  - password (hidden, no access in general db)
+  - created_at
+  - updated_at
+  - rfc
+  - curp
+  - address (use an address api where user types and gets autocomplete for now)
+  - phone
+  - FK company_id (m2m)
 - Company
+  - id
+  - name
+  - legal name (ideally if customer creating a new account, this connects to SAT/gov db with existing company names to get the legal company name as customer types)
+  - email_domain
+  - created_at
+  - updated_at
+  - FK user_id (m2m)
 - Bank Account
   - id
+  - account_number
+  - clabe
+  - currency
+  - name (default 'Cuenta Sol')
+  - created_at
+  - updated_at
+  - type (checking, savings, default checking)
+  - status
+  - current_balance
+  - available_balance
+  - FK company_id
 - Debit Card
   - id
   - first name
   - last name
-  - card number
-  - expiry date
-  - CVC code
-  - processor (visa, mastercard)
-  - image (image of card to display in UI to user)
+  - last4_digits_card
+  - pan_token (encrypted version of the full card number)
+  - expiry month
+  - expiry year
+  - cvc_token
+  - network (visa, mastercard)
+  - image_url (image of card to display in UI to user)
+  - status
+  - daily_spend_limit
+  - billing_address (ideally user inputs and UI autofills the address)
+  - created_at
+  - updated_at
+  - FK bank_account_id
 - Transaction
   - id
   - from
   - to
   - amount
-  - timestamp created
-  - user
-  - bank account
+  - type (ACH, debit card, interest, adjustment,)
+  - direction (debit or credit)
+  - currency
+  - description
+  - counterparty_type
+  - counterparty_name
+  - counterparty_account_id
+  - counterparty_type
+  - counterparty_data (json value of all received data from counterparty)
+  - fx_rate
+  - status
+  - posted_at
+  - created_at
+  - updated_at
+  - FK user_id
+  - FK bank_account
+  - FK company_id
+  - FK debit_card_id
+  - FK statement_id
 - Statement
   - id
-  - current balance
-  - previous balance
+  - opening_balance
+  - closing_balance
   - transactions
-  - user
-  - bank account
-
+  - FK bank_account_id
+  - FK company_id
+  - created_at
+  - updated_at
+  - period_start
+  - period_end
+  - file_url (pdf)
