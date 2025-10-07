@@ -41,15 +41,18 @@ This includes the ability for the user to:
 The objects required to build out this initial phase of the app include:
 
 - User
+  - id
+  - email
   - first name
   - last name
-  - email
-  - company name
+  - company_id
     - extract via email domain, possibly integrate hunter.io to extract
   - password
 - Company
 - Bank Account
+  - id
 - Debit Card
+  - id
   - first name
   - last name
   - card number
@@ -58,6 +61,7 @@ The objects required to build out this initial phase of the app include:
   - processor (visa, mastercard)
   - image (image of card to display in UI to user)
 - Transaction
+  - id
   - from
   - to
   - amount
@@ -65,6 +69,7 @@ The objects required to build out this initial phase of the app include:
   - user
   - bank account
 - Statement
+  - id
   - current balance
   - previous balance
   - transactions
