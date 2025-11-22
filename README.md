@@ -1,3 +1,26 @@
+# Loan Origination Automation App
+
+This platform replaces a bank's internal process to originate loans through loan requests. It should basically
+extract any data it needs to qualify the loan request and provide approval and/or underwriting
+the loan with all necesary terms.
+
+This app combines user inputs, mostly pdf/jpeg/excel files, with third party files, like buro de credito, alternative data,
+then uses AI to interpret the customer profile and it outputs a complete loan
+
+This app essentially replaces the loan origination process and therefore the risk analysis teams at banks,
+which could be 5% of a bank's workforce.
+
+
+Luego seria el proceso:
+
+	1. Pyme pide credito en portal en linea
+	2. Banco pide a Pyme archivos:
+		a. Acta constitutiva
+		b. Ingresos de empresa, o personales de ser empresa nueva
+	3. Banco pide archivos por aparte:
+		a. Reporte crediticio de buro de credito/linea de credito
+
+
 # Sol Bank Overview
 
 Sol Bank is the most user-friendly Mexican online bank made for small businesses. It is based on the idea that my experience with BBVA and Banregio business banks were both very poor in terms of ease of onboarding, and ease of use and making payments. The overall experience was terrible, with account creation a pain and making payments even more pain. I had to switch from Banregio to BBVA because of the terrible experience (which was a bit better, but still a lot of pain points that needed solving).
